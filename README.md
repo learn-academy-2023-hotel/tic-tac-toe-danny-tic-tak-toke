@@ -65,6 +65,11 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 # styled the boxes to create a 3x3 grid for the board
 
 - As a user, I can click on a square to mark it.
+## branch: square-click
+# created the handleSquareClick function in App.js to mark the board with an "⭕"
+# created a handleClick function in Sqaure.js that takes in a handleSquareClick function to operate the click event
+# styled the font size and centered the text in each box
+
 - As a user, my partner can click on a square after me and see their mark.
 - As a user, I can't click on a square that has already been marked.
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.
