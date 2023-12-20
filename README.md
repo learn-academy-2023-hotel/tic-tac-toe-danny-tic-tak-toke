@@ -71,6 +71,11 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 # styled the font size and centered the text in each box
 
 - As a user, my partner can click on a square after me and see their mark.
+## branch: square-click-2
+# created a state variable for a number count to have a unique symbol for each players click
+# used conditional statements to determine the amount of clicks and decide which symbol will populate in each square.
+# ended the conditional to alert "Game Over!" when all sqaures are full
+
 - As a user, I can't click on a square that has already been marked.
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.
 - As a user, I can't play the game after the game has been won.
