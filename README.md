@@ -77,6 +77,9 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 # ended the conditional to alert "Game Over!" when all sqaures are full
 
 - As a user, I can't click on a square that has already been marked.
+## branch: marked-square
+# added a conditional statement in Square.js to the handleClick function that only calls on the handleSquareClick function from App.js if the square is empty.
+
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.
 - As a user, I can't play the game after the game has been won.
 - As a user, if no more squares are available, I can see a notice telling me that the game has ended.
