@@ -3,9 +3,14 @@ import Square from "./components/Square";
 import "./App.css";
 
 const App = () => {
+  const board = Array(9).fill(null)
+  
+  const [squares, setSquares] = useState(board);
+  
   const [count, setCount] = useState(0);
 
-  const [squares, setSquares] = useState(Array(9).fill(null));
+
+  const [message, setMessage] = useState("");
 
   const handleSquareClick = (clickedSquareIndex) => {
     let updatedSquare = [...squares];
@@ -45,14 +50,23 @@ const App = () => {
       updatedSquare[clickedSquareIndex] = "❌";
       setSquares(updatedSquare);
       setCount(count + 1);
-    } else {
-      alert("Game Over!")
+    } else if (count === 9){
+      updatedSquare[clickedSquareIndex] = null
     }
+    else {
+      alert("Game Over!");
+    }
+  };
+
+  const handlePlayerOneWin = () => {
+    setMessage("Player One Wins");
+    setCount(9)
   };
 
   return (
     <>
       <h1>Tic Tac Toe</h1>
+      <div>{message}</div>
       <div className="square-container">
         {squares.map((square, index) => {
           return (
@@ -61,6 +75,7 @@ const App = () => {
               square={square}
               index={index}
               handleSquareClick={handleSquareClick}
+              handlePlayerOneWin={handlePlayerOneWin}
             />
           );
         })}
