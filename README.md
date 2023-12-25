@@ -61,7 +61,7 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 - As a user, I can see a three by three grid game board on the page.
 ## branch: board
 # mapped over the array of boxes in App.js to create 9 boxes
-# went ahead and passed the props over to Square.js
+# passed the props over to Square.js
 # styled the boxes to create a 3x3 grid for the board
 
 - As a user, I can click on a square to mark it.
@@ -81,6 +81,11 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 # added a conditional statement in Square.js to the handleClick function that only calls on the handleSquareClick function from App.js if the square is empty.
 
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.
+## branch: winner
+# created a function to checkForWin in App.js that checs  winning conditions (horizontally, vertically, or diagonally) and sets a message to announce a winner.
+# created a state variable for the message to change when a player has won
+# called the checkForWin function in the handleSquareClick function to check for a winner after each click.
+
 - As a user, I can't play the game after the game has been won.
 - As a user, if no more squares are available, I can see a notice telling me that the game has ended.
 - As a user, I can click on a restart button that will clear the game board.

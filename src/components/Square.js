@@ -15,4 +15,5 @@ const Square = ({ square, index, handleSquareClick }) => {
     </div>
   );
 };
+
 export default Square;
