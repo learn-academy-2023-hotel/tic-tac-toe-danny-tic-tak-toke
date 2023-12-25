@@ -11,9 +11,13 @@ const App = () => {
 
   const [message, setMessage] = useState("Tic Tac Toke");
 
+  const [isGameOver, setIsGameOver] = useState(false);
+
   const handleSquareClick = (clickedSquareIndex) => {
     let updatedSquare = [...squares];
-    if (count === 0) {
+    if (isGameOver === true) {
+      updatedSquare[clickedSquareIndex] = null;
+    } else if (count === 0) {
       updatedSquare[clickedSquareIndex] = "❌";
       setSquares(updatedSquare);
       checkForWin(updatedSquare);
@@ -84,6 +88,7 @@ const App = () => {
         squares[b] === squares[c]
       ) {
         setMessage(squares[a] + " is the winner");
+        setIsGameOver(true);
       }
     }
     return null;
