@@ -13,11 +13,14 @@ const App = () => {
 
   const [isGameOver, setIsGameOver] = useState(false);
 
+  const [isBoardFull, setIsBoardFull] = useState(true)
+
   const handleSquareClick = (clickedSquareIndex) => {
-    let updatedSquare = [...squares];
     if (isGameOver === true) {
-      updatedSquare[clickedSquareIndex] = null;
-    } else if (count === 0) {
+      squares[clickedSquareIndex] = null;
+    return null}
+      let updatedSquare = [...squares];
+    if (count === 0) {
       updatedSquare[clickedSquareIndex] = "❌";
       setSquares(updatedSquare);
       checkForWin(updatedSquare);
@@ -59,15 +62,24 @@ const App = () => {
       setCount(count + 1);
     } else if (count === 8) {
       updatedSquare[clickedSquareIndex] = "❌";
-      setSquares(updatedSquare);
       checkForWin(updatedSquare);
-      setCount(count + 1);
-    } else if (count === 9) {
-      updatedSquare[clickedSquareIndex] = null;
+      checkFullBoard(updatedSquare)
+      setSquares(updatedSquare);
     } else {
       alert("Game Over!");
     }
   };
+
+  const checkFullBoard = (squares) => {
+    for (let i = 0; i < squares.length; i++) {
+      if (squares[i] === null) {
+        setIsBoardFull(false);
+  }
+  if (isBoardFull){
+  setMessage("Draw")
+}
+  }
+}
 
   const checkForWin = (squares) => {
     let winConditions = [

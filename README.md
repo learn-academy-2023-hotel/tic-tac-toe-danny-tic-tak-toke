@@ -91,7 +91,13 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 ### created a state variable to check isGameOver and set it to true.
 ### included the conditional statement to check if isGameOver was set to false and updated the square to return null.
 ### set the isGameOver to true if the function checkForWin condition was met.
+
 - As a user, if no more squares are available, I can see a notice telling me that the game has ended.
+# branch: full-board-endgame
+### created a state variable isBoardFull set to true
+### created a function to determine if the board is full by iterating through each individual square. if it was, then the set state remains true, if not the set state is false
+### called the checkFullBoard function on the last play to determine if the game is over via full board or a winner.
+
 - As a user, I can click on a restart button that will clear the game board.
 
 ### 🏔 Stretch Goals
