@@ -59,34 +59,38 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 ### 📚 User Stories
 
 - As a user, I can see a three by three grid game board on the page.
-## branch: board
-# mapped over the array of boxes in App.js to create 9 boxes
-# passed the props over to Square.js
-# styled the boxes to create a 3x3 grid for the board
+# branch: board
+### mapped over the array of boxes in App.js to create 9 boxes
+### passed the props over to Square.js
+### styled the boxes to create a 3x3 grid for the board
 
 - As a user, I can click on a square to mark it.
-## branch: square-click
-# created the handleSquareClick function in App.js to mark the board with an "⭕"
-# created a handleClick function in Sqaure.js that takes in a handleSquareClick function to operate the click event
-# styled the font size and centered the text in each box
+# branch: square-click
+### created the handleSquareClick function in App.js to mark the board with an "⭕"
+### created a handleClick function in Sqaure.js that takes in a handleSquareClick function to operate the click event
+### styled the font size and centered the text in each box
 
 - As a user, my partner can click on a square after me and see their mark.
-## branch: square-click-2
-# created a state variable for a number count to have a unique symbol for each players click
-# used conditional statements to determine the amount of clicks and decide which symbol will populate in each square.
-# ended the conditional to alert "Game Over!" when all sqaures are full
+# branch: square-click-2
+### created a state variable for a number count to have a unique symbol for each players click
+### used conditional statements to determine the amount of clicks and decide which symbol will populate in each square.
+### ended the conditional to alert "Game Over!" when all sqaures are full
 
 - As a user, I can't click on a square that has already been marked.
-## branch: marked-square
-# added a conditional statement in Square.js to the handleClick function that only calls on the handleSquareClick function from App.js if the square is empty.
+# branch: marked-square
+### added a conditional statement in Square.js to the handleClick function that only calls on the handleSquareClick function from App.js if the square is empty.
 
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.
-## branch: winner
-# created a function to checkForWin in App.js that checs  winning conditions (horizontally, vertically, or diagonally) and sets a message to announce a winner.
-# created a state variable for the message to change when a player has won
-# called the checkForWin function in the handleSquareClick function to check for a winner after each click.
+# branch: winner
+### created a function to checkForWin in App.js that checs  winning conditions (horizontally, vertically, or diagonally) and sets a message to announce a winner.
+### created a state variable for the message to change when a player has won
+### called the checkForWin function in the handleSquareClick function to check for a winner after each click.
 
 - As a user, I can't play the game after the game has been won.
+# branch: endgame
+### created a state variable to check isGameOver and set it to true.
+### included the conditional statement to check if isGameOver was set to false and updated the square to return null.
+### set the isGameOver to true if the function checkForWin condition was met.
 - As a user, if no more squares are available, I can see a notice telling me that the game has ended.
 - As a user, I can click on a restart button that will clear the game board.
 
