@@ -99,6 +99,10 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 ### called the checkFullBoard function on the last play to determine if the game is over via full board or a winner.
 
 - As a user, I can click on a restart button that will clear the game board.
+# branch: button
+### added a button with "restart" in it.
+### created a variable to restart the game that sets the state back to original board
+## called the function in the button in the return
 
 ### 🏔 Stretch Goals
 
