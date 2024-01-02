@@ -9,7 +9,7 @@ const App = () => {
 
   const [count, setCount] = useState(0);
 
-  const [message, setMessage] = useState("Tic Tac Toke");
+  const [message, setMessage] = useState("Player 1 turn");
 
   const [isGameOver, setIsGameOver] = useState(false);
 
@@ -23,41 +23,49 @@ const App = () => {
     if (count === 0) {
       updatedSquare[clickedSquareIndex] = "❌";
       setSquares(updatedSquare);
+      setMessage("Player 2 turn")
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 1) {
       updatedSquare[clickedSquareIndex] = "⭕";
       setSquares(updatedSquare);
+      setMessage("Player 1 turn")
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 2) {
       updatedSquare[clickedSquareIndex] = "❌";
       setSquares(updatedSquare);
+      setMessage("Player 2 turn")
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 3) {
       updatedSquare[clickedSquareIndex] = "⭕";
       setSquares(updatedSquare);
+      setMessage("Player 1 turn")
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 4) {
       updatedSquare[clickedSquareIndex] = "❌";
       setSquares(updatedSquare);
+      setMessage("Player 2 turn")
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 5) {
       updatedSquare[clickedSquareIndex] = "⭕";
       setSquares(updatedSquare);
+      setMessage("Player 1 turn")
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 6) {
       updatedSquare[clickedSquareIndex] = "❌";
       setSquares(updatedSquare);
+      setMessage("Player 2 turn")
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 7) {
       updatedSquare[clickedSquareIndex] = "⭕";
       setSquares(updatedSquare);
+      setMessage("Player 1 turn")
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 8) {
@@ -108,7 +116,7 @@ const App = () => {
   const handleButton = () => {
     setSquares(board)
     setCount(0)
-    setMessage("Tic Tac Toke")
+    setMessage("Player 1 turn")
     setIsBoardFull(true)
     setIsGameOver(false)
   }
