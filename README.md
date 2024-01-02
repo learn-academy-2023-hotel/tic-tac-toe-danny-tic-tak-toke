@@ -108,6 +108,10 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 
 - As a user, I can see pleasant stylings on the application.
 - As a user, I can see a notification that informs me whether it is currently my partner or my turn.
+# branch: player-turn
+### changed message to read "player 1 turn"
+### set message after each turn to toggle from player 1 turn to player 2 turn based on the count
+
 - As a user, I can choose my marker from a predetermined list (X, O, a color, an emoji, etc...).
 
 ### 👩‍💻 Developer Stretch Goals
