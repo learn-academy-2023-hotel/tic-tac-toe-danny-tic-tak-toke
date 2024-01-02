@@ -76,8 +76,7 @@ const App = () => {
         setIsBoardFull(false);
   }
   if (isBoardFull){
-  setMessage("Draw")
-}
+  setMessage("Draw")}
   }
 }
 
@@ -106,6 +105,14 @@ const App = () => {
     return null;
   };
 
+  const handleButton = () => {
+    setSquares(board)
+    setCount(0)
+    setMessage("Tic Tac Toke")
+    setIsBoardFull(true)
+    setIsGameOver(false)
+  }
+
   return (
     <>
       <h1>Tic Tac Toe</h1>
@@ -119,9 +126,10 @@ const App = () => {
               index={index}
               handleSquareClick={handleSquareClick}
             />
-          );
+            );
         })}
       </div>
+      <button onClick={handleButton}>Restart</button>
     </>
   );
 };
