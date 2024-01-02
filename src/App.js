@@ -13,65 +13,66 @@ const App = () => {
 
   const [isGameOver, setIsGameOver] = useState(false);
 
-  const [isBoardFull, setIsBoardFull] = useState(true)
+  const [isBoardFull, setIsBoardFull] = useState(true);
 
   const handleSquareClick = (clickedSquareIndex) => {
     if (isGameOver === true) {
       squares[clickedSquareIndex] = null;
-    return null}
-      let updatedSquare = [...squares];
+      return null;
+    }
+    let updatedSquare = [...squares];
     if (count === 0) {
       updatedSquare[clickedSquareIndex] = "❌";
       setSquares(updatedSquare);
-      setMessage("Player 2 turn")
+      setMessage("Player 2 turn");
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 1) {
       updatedSquare[clickedSquareIndex] = "⭕";
       setSquares(updatedSquare);
-      setMessage("Player 1 turn")
+      setMessage("Player 1 turn");
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 2) {
       updatedSquare[clickedSquareIndex] = "❌";
       setSquares(updatedSquare);
-      setMessage("Player 2 turn")
+      setMessage("Player 2 turn");
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 3) {
       updatedSquare[clickedSquareIndex] = "⭕";
       setSquares(updatedSquare);
-      setMessage("Player 1 turn")
+      setMessage("Player 1 turn");
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 4) {
       updatedSquare[clickedSquareIndex] = "❌";
       setSquares(updatedSquare);
-      setMessage("Player 2 turn")
+      setMessage("Player 2 turn");
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 5) {
       updatedSquare[clickedSquareIndex] = "⭕";
       setSquares(updatedSquare);
-      setMessage("Player 1 turn")
+      setMessage("Player 1 turn");
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 6) {
       updatedSquare[clickedSquareIndex] = "❌";
       setSquares(updatedSquare);
-      setMessage("Player 2 turn")
+      setMessage("Player 2 turn");
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 7) {
       updatedSquare[clickedSquareIndex] = "⭕";
       setSquares(updatedSquare);
-      setMessage("Player 1 turn")
+      setMessage("Player 1 turn");
       checkForWin(updatedSquare);
       setCount(count + 1);
     } else if (count === 8) {
       updatedSquare[clickedSquareIndex] = "❌";
       checkForWin(updatedSquare);
-      checkFullBoard(updatedSquare)
+      checkFullBoard(updatedSquare);
       setSquares(updatedSquare);
     } else {
       alert("Game Over!");
@@ -82,11 +83,12 @@ const App = () => {
     for (let i = 0; i < squares.length; i++) {
       if (squares[i] === null) {
         setIsBoardFull(false);
-  }
-  if (isBoardFull){
-  setMessage("Draw")}
-  }
-}
+      }
+      if (isBoardFull) {
+        setMessage("Draw");
+      }
+    }
+  };
 
   const checkForWin = (squares) => {
     let winConditions = [
@@ -114,17 +116,17 @@ const App = () => {
   };
 
   const handleButton = () => {
-    setSquares(board)
-    setCount(0)
-    setMessage("Player 1 turn")
-    setIsBoardFull(true)
-    setIsGameOver(false)
-  }
+    setSquares(board);
+    setCount(0);
+    setMessage("Player 1 turn");
+    setIsBoardFull(true);
+    setIsGameOver(false);
+  };
 
   return (
     <>
       <h1>Tic Tac Toe</h1>
-      <div>{message}</div>
+      <h1>{message}</h1>
       <div className="square-container">
         {squares.map((square, index) => {
           return (
@@ -134,10 +136,12 @@ const App = () => {
               index={index}
               handleSquareClick={handleSquareClick}
             />
-            );
+          );
         })}
       </div>
-      <button onClick={handleButton}>Restart</button>
+      <div className="button-center">
+          <button onClick={handleButton}>Restart</button>
+      </div>
     </>
   );
 };
